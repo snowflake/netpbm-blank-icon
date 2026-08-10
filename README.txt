@@ -5,6 +5,8 @@ Possible problems with netpbm and/or Inkscape when generating icons.
 When converting from SVG to ICO (Windows Icon) format, I sometimes
 see messages like this in the log:
 
+( See star/fromico.log )
+
 winicontopam: star.ico icon directory (3 images):
 winicontopam:     0:  16 x  16,      256 colors,  1128 bytes
 winicontopam:     1:  32 x  32,      256 colors,  2216 bytes
