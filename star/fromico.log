@@ -1,0 +1,70 @@
+Script started on Mon Aug 10 12:39:37 2026
+Command: ../cv.sh star.ico
+************ Converting star.ico to various formats ************
+------------ netpbm version info
+/opt/netpbm-a/bin/winicontopam
+winicontopam: Using libnetpbm from Netpbm Version: Netpbm 11.15.5
+winicontopam: Built at 2026-08-09 15:01:35
+winicontopam: Built by davidevans
+winicontopam: BSD defined
+winicontopam: RGB_ENV='RGBDEF'
+winicontopam: RGBENV= 'RGBDEF' (env vbl is unset)
+------------ split the ico file
+winicontopam: star.ico icon directory (3 images):
+winicontopam:     0:  16 x  16,      256 colors,  1128 bytes
+winicontopam:     1:  32 x  32,      256 colors,  2216 bytes
+winicontopam:     2:  48 x  48,      256 colors,  3752 bytes
+winicontopam: image  0 mismatch in header and image bpp value(8 vs. 32)
+winicontopam: image  0: All pixels are nominally coded in the transparency map as fully transparent, which is defined by the format to mean they are all opaque
+winicontopam: image  0: BMP  16 x  16 x 32 (RGB)
+winicontopam: image  1: BMP  32 x  32 x  8 (RGB/palette)
+winicontopam: image  2: BMP  48 x  48 x  8 (RGB/palette)
+pamsplit: WRITING im0.pam
+pamsplit: WRITING im1.pam
+pamsplit: WRITING im2.pam
+
+------------ convert the split files into png
+pam to png for im0
+pamtopng: Input format = PAM
+pamtopng: Input tuple type = 'RGB_ALPHA'
+pamtopng: Input depth = 4
+pamtopng: Input maxval = 255
+pam to png for im1
+pamtopng: Input format = PAM
+pamtopng: Input tuple type = 'RGB_ALPHA'
+pamtopng: Input depth = 4
+pamtopng: Input maxval = 255
+pam to png for im2
+pamtopng: Input format = PAM
+pamtopng: Input tuple type = 'RGB_ALPHA'
+pamtopng: Input depth = 4
+pamtopng: Input maxval = 255
+------------ Convert pam to ico
+pamtowinicon: Image  0: encoding as BMP
+pamtowinicon: Image  0:  16 x  16 x 4, 52 colors, AND mask
+pamtowinicon: Image  0: 1128 bytes
+pamtowinicon: Image  1: encoding as BMP
+pamtowinicon: Image  1:  32 x  32 x 4, 108 colors, AND mask
+pamtowinicon: Image  1: 2216 bytes
+pamtowinicon: Image  2: encoding as BMP
+pamtowinicon: Image  2:  48 x  48 x 4, 142 colors, AND mask
+pamtowinicon: Image  2: 3752 bytes
+pamtowinicon: image  0:  16 x  16 x  8
+pamtowinicon: image  1:  32 x  32 x  8
+pamtowinicon: image  2:  48 x  48 x  8
+------------ Convert each pam to ico
+pamtowinicon: Image  0: encoding as BMP
+pamtowinicon: Image  0:  16 x  16 x 4, 52 colors, AND mask
+pamtowinicon: Image  0: 1128 bytes
+pamtowinicon: image  0:  16 x  16 x  8
+pamtowinicon: Image  0: encoding as BMP
+pamtowinicon: Image  0:  32 x  32 x 4, 108 colors, AND mask
+pamtowinicon: Image  0: 2216 bytes
+pamtowinicon: image  0:  32 x  32 x  8
+pamtowinicon: Image  0: encoding as BMP
+pamtowinicon: Image  0:  48 x  48 x 4, 142 colors, AND mask
+pamtowinicon: Image  0: 3752 bytes
+pamtowinicon: image  0:  48 x  48 x  8
+
+Command exit status: 0
+Script done on Mon Aug 10 12:39:37 2026
