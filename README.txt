@@ -30,7 +30,16 @@ square.svg     A very basic graphic of a box. The ico works.
 star.svg       A polygon. 
 v-sign.svg     A simple V.
 
+Testing the icons in your browser
+---------------------------------
+
+Please open view.html to view all the icons at various sizes.
+
+At the moment, not all the icons render on Safari on macOS.
+They are fine on macOS using Google Chrome and Firefox.
+
 Scripts in this repository:
+---------------------------
 
 build.sh  - run this to regenerate all the files for each SVG in subdirectories
 ficon.sh  - Converts SVG to ICO.  Run as "ficon.sh {name of svg file}"
