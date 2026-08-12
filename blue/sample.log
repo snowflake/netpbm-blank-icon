@@ -1,0 +1,17 @@
+Script started on Wed Aug 12 11:33:56 2026
+Command: make ico
+./blue
+cat blue.ppm | pamtowinicon -v > blue.ico
+pamtowinicon: Image  0: encoding as BMP
+pamtowinicon: Image  0:  16 x  16 x 3, 256 colors
+pamtowinicon: Image  0: 1128 bytes
+pamtowinicon: image  0:  16 x  16 x  8
+cat blue.ico | winicontopam -v > blue.pam
+winicontopam: <stdin> icon directory (1 image):
+winicontopam:     0:  16 x  16,      256 colors,  1128 bytes
+winicontopam: image  0 mismatch in header and image bpp value(8 vs. 32)
+winicontopam: image  0: All pixels are nominally coded in the transparency map as fully transparent, which is defined by the format to mean they are all opaque
+winicontopam: image  0: BMP  16 x  16 x 32 (RGB)
+
+Command exit status: 0
+Script done on Wed Aug 12 11:33:57 2026
