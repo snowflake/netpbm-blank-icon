@@ -32,9 +32,9 @@ do
     inkscape --export-type="png" --export-width=$i --export-height=$i \
 	     --export-filename="${t}${i}.png" "${m}.svg"
     pngtopam "${t}${i}.png" > "${t}${i}.pam"
-    pamtowinicon "${t}${i}.pam" > "${t}${i}.ico" 
+    pamtowinicon -pngthreshold=1 "${t}${i}.pam" > "${t}${i}.ico" 
 done
 cat ${t}[0-9]*.pam > "${t}.comb.pam"
-pamtowinicon "${t}.comb.pam" > "${m}.ico"
+pamtowinicon -pngthreshold=1 "${t}.comb.pam" > "${m}.ico"
 
 

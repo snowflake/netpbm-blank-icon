@@ -1,0 +1,15 @@
+Script started on Fri Aug 14 09:29:14 2026
+Command: make ico
+./blue
+cat blue.ppm | pamtowinicon -pngthreshold=1 -v > blue.ico
+pamtowinicon: Image  0: encoding as PNG
+pamtowinicon: Image  0:  16 x  16 x 3, 256 colors
+pamtowinicon: Image  0: 1120 bytes
+pamtowinicon: image  0:  16 x  16 x 32
+cat blue.ico | winicontopam -v > blue.pam
+winicontopam: <stdin> icon directory (1 image):
+winicontopam:     0:  16 x  16, 16777216 colors,  1120 bytes
+winicontopam: image  0: PNG  16 x  16 x  8 (RGB/palette)
+
+Command exit status: 0
+Script done on Fri Aug 14 09:29:14 2026

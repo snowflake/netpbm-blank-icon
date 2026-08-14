@@ -7,7 +7,7 @@ blue: blue.c
 
 ico:
 	./blue
-	cat blue.ppm | pamtowinicon -v > blue.ico
+	cat blue.ppm | pamtowinicon -pngthreshold=1 -v > blue.ico
 	cat blue.ico | winicontopam -v > blue.pam
 
 clean:

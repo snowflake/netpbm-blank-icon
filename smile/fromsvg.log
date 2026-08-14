@@ -1,20 +1,20 @@
-Script started on Mon Aug 10 12:39:31 2026
+Script started on Fri Aug 14 09:31:14 2026
 Command: ../ficon.sh smile.svg
 ************* Converting smile.svg to ico format *****************
 ------------- display netpbm version
 /opt/netpbm-a/bin/winicontopam
-winicontopam: Using libnetpbm from Netpbm Version: Netpbm 11.15.5
-winicontopam: Built at 2026-08-09 15:01:35
+winicontopam: Using libnetpbm from Netpbm Version: Netpbm 11.15.99
+winicontopam: Built at 2026-08-13 19:25:36
 winicontopam: Built by davidevans
 winicontopam: BSD defined
 winicontopam: RGB_ENV='RGBDEF'
 winicontopam: RGBENV= 'RGBDEF' (env vbl is unset)
-pamtowinicon: image  0:  16 x  16 x  8
-pamtowinicon: image  0:  32 x  32 x  8
+pamtowinicon: image  0:  16 x  16 x 32
+pamtowinicon: image  0:  32 x  32 x 32
 pamtowinicon: image  0:  48 x  48 x 32
-pamtowinicon: image  0:  16 x  16 x  8
-pamtowinicon: image  1:  32 x  32 x  8
+pamtowinicon: image  0:  16 x  16 x 32
+pamtowinicon: image  1:  32 x  32 x 32
 pamtowinicon: image  2:  48 x  48 x 32
 
 Command exit status: 0
-Script done on Mon Aug 10 12:39:33 2026
+Script done on Fri Aug 14 09:31:16 2026

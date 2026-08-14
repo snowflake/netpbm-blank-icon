@@ -29,10 +29,10 @@ do
     pamtopng -v "$i" > "$bn.png"
 done
 echo ------------ Convert pam to ico
-cat im*.pam | pamtowinicon -v > im.ico
+cat im*.pam | pamtowinicon -pngthreshold=1 -v > im.ico
 echo ------------ Convert each pam to ico
 for i in im[0-9]*.pam
 do
     xn=$(basename "$i" .pam)
-    cat "$i" | pamtowinicon -v > "$xn.ico"
+    cat "$i" | pamtowinicon -pngthreshold=1 -v > "$xn.ico"
 done
