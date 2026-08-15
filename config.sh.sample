@@ -1,0 +1,15 @@
+
+
+# set configuration options
+
+# If PNGTHRESHOLD is already set in the environment, use that
+if [ ! -z "${PNGTHRESHOLD}" ]
+then
+    SETPNGTHRESHOLD=${PNGTHRESHOLD}
+else
+    # Otherwise use this
+    SETPNGTHRESHOLD=1
+fi
+export SETPNGTHRESHOLD
+
+

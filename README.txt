@@ -21,6 +21,15 @@ winicontopam: image  2: BMP  48 x  48 x  8 (RGB/palette)
 and the resulting image displays as all white on macOS Preview and macOS
 Safari, although it is OK with macOS Google Chrome.
 
+How to build the ico, pam, etc files
+------------------------------------
+
+Copy config.sh.sample and edit it according to your requirements.
+It sets the pngthreshold for pamtowinicon.
+
+Then:
+	make all
+
 SVG files in this repository
 ----------------------------
 

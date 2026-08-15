@@ -3,6 +3,13 @@
 # convert ico to various formats
 set -e
 
+if [ -z "${SETPNGTHRESHOLD}" ]
+then
+    echo SETPNGTHRESHOLD is not set
+    exit 1
+fi
+
+
 if [  "$2" != "syspath" ]
 then    
     PATH=/opt/netpbm-a/bin:${PATH}
@@ -17,6 +24,7 @@ echo "************ Converting $1 to various formats ************"
 echo "------------ netpbm version info"
 which winicontopam
 winicontopam -version
+echo "             pngthreshold is ${SETPNGTHRESHOLD}"
 echo "------------ split the ico file"
 rm -f im*.pam im*.png im*.ico
 winicontopam -allimages -v "${1}" | pamsplit - im%d.pam
@@ -29,10 +37,10 @@ do
     pamtopng -v "$i" > "$bn.png"
 done
 echo ------------ Convert pam to ico
-cat im*.pam | pamtowinicon -v > im.ico
+cat im*.pam | pamtowinicon -v -pngthreshold="$SETPNGTHRESHOLD" > im.ico
 echo ------------ Convert each pam to ico
 for i in im[0-9]*.pam
 do
     xn=$(basename "$i" .pam)
-    cat "$i" | pamtowinicon -v > "$xn.ico"
+    cat "$i" | pamtowinicon -v -pngthreshold="$SETPNGTHRESHOLD" > "$xn.ico"
 done
