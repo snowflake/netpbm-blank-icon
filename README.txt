@@ -51,6 +51,7 @@ Scripts in this repository:
 ---------------------------
 
 preview.sh - Shows ICOs in Preview (macOS only).
+flist.sh   - File listing of ICOs.
 
 NOTE: It's more convenient to run the follwing scripts using the Makefile.
 
