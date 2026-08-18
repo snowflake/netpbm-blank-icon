@@ -50,13 +50,19 @@ They are fine on macOS using Google Chrome and Firefox.
 Scripts in this repository:
 ---------------------------
 
+preview.sh - Shows ICOs in Preview (macOS only).
+
+NOTE: It's more convenient to run the follwing scripts using the Makefile.
+
 build.sh  - run this to regenerate all the files for each SVG in subdirectories
+
 ficon.sh  - Converts SVG to ICO.  Run as "ficon.sh {name of svg file}"
 	    Example: ./ficon.sh star.svg
 
 cv.sh     - Converts ICO to PAM, ICO and PNG. Run as "cv.sh {name of ico file}"
 	    Example: ./cv.sh star.ico
-	    
+
+
 Files in the directories:
 -------------------------
 
@@ -96,21 +102,6 @@ Inkscape 1.4.3 (0d15f750, 2025-12-25)
 
 Netpbm:
 It is built locally.
-Using libnetpbm from Netpbm Version: Netpbm 11.15.5
-Built at 2026-08-09 15:01:35
-
-Netpbm svn info:
-URL: http://svn.code.sf.net/p/netpbm/code/advanced
-Relative URL: ^/advanced
-Repository Root: http://svn.code.sf.net/p/netpbm/code
-Repository UUID: 9d0c8265-081b-0410-96cb-a4ca84ce46f8
-Revision: 5288
-Node Kind: directory
-Schedule: normal
-Last Changed Author: giraffedata
-Last Changed Rev: 5283
-Last Changed Date: 2026-08-03 20:06:04 +0100 (Mon, 03 Aug 2026)
-
 Libraries required by Netpbm are built with Macports.
 
 
