@@ -12,4 +12,17 @@ else
 fi
 export SETPNGTHRESHOLD
 
+####
 
+# ALPHAPAM is 0 to not use -alphapam, 1 to use -alphapam
+# If ALPHAPAM is already set in the environment, use that
+if [ ! -z "${ALPHAPAM}" ]
+then
+    SETALPHAPAM=${ALPHAPAM}
+else
+    # Otherwise use this
+    SETALPHAPAM=1
+fi
+export SETALPHAPAM
+
+# 

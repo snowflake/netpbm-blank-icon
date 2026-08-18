@@ -21,9 +21,15 @@ then
 fi
 echo "************* Converting $1 to ico format *****************"
 echo "              pngthreshold is $SETPNGTHRESHOLD"
+echo "              alphapam is ${SETALPHAPAM}"
 echo "------------- display netpbm version"
 which winicontopam
 winicontopam -version
+
+if test 1 -eq "$SETALPHAPAM"
+then
+    XALPHAPAM=-alphapam
+fi
 
 m=$(basename "${1}" .svg)
 
@@ -34,11 +40,12 @@ then
 fi
 rm -f tmp*
 t=tmp
-for  i in 16 32 48
+for  i in 16 32 48 # 64 128 256
 do
     inkscape --export-type="png" --export-width=$i --export-height=$i \
 	     --export-filename="${t}${i}.png" "${m}.svg"
-    pngtopam "${t}${i}.png" > "${t}${i}.pam"
+    # don't put quotes around $XALPHAPAM
+    pngtopam $XALPHAPAM "${t}${i}.png" > "${t}${i}.pam"
     pamtowinicon -pngthreshold="$SETPNGTHRESHOLD" "${t}${i}.pam" > "${t}${i}.ico" 
 done
 cat ${t}[0-9]*.pam > "${t}.comb.pam"

@@ -14,5 +14,6 @@ do
     mkdir -p "$bn"
     cp "$i" "$bn"
     (source config.sh && cd "$bn" && script fromsvg.log ../ficon.sh "$i" )
+#    (source config.sh && cd "$bn" && script _tobmp.log  ../tmptobmp.sh )
     (source config.sh && cd "$bn" && script fromico.log ../cv.sh "$bn.ico" )
 done
