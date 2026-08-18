@@ -19,7 +19,7 @@ winicontopam: image  1: BMP  32 x  32 x  8 (RGB/palette)
 winicontopam: image  2: BMP  48 x  48 x  8 (RGB/palette)
 
 and the resulting image displays as all white on macOS Preview and macOS
-Safari, although it is OK with macOS Google Chrome.
+Safari, although it is OK with macOS Google Chrome and Firefox.
 
 How to build the ico, pam, etc files
 ------------------------------------
@@ -52,7 +52,9 @@ Scripts in this repository:
 
 preview.sh - Shows ICOs in Preview (macOS only).
 flist.sh   - File listing of ICOs.
-
+config.sh  - You should copy this from config.sh.sample and
+             edit config.sh for your requirements.
+	     
 NOTE: It's more convenient to run the follwing scripts using the Makefile.
 
 build.sh  - run this to regenerate all the files for each SVG in subdirectories
